@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Birthdays - Edit</title>
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Edit Birthday</h1>
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form method="post" action="/edit">
+                    <input type="hidden" name="id" value="{{ birthday.id }}">
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="name" placeholder="Name" value="{{ birthday.name }}" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="number" class="form-control" name="month" placeholder="Month" min="1" max="12" value="{{ birthday.month }}" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="number" class="form-control" name="day" placeholder="Day" min="1" max="31" value="{{ birthday.day }}" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+#timer {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 5px;
+}
+
+h1 {
+    color: #007bff;
+}
+
+p.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.bg-orange {
+    background-color: #EDA55F !important; /* Laranja */
+}
+
+.bg-green {
+    background-color: #77FF80 !important; /* Verde */
+}

@@ -1,0 +1,33 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+    background-color: #f4f4f4; /* Fundo cinza claro */
+}
+
+h1 {
+    color: #333; /* Cor de texto escura */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.container {
+    background-color: #fff; /* Fundo branco para o conteúdo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais forte */
+}
+
+.section {
+    padding: 2rem;
+}
+
+.table {
+    background-color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Azul primário */
+    border-color: #007bff;
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Amarelo */
+    border-color: #ffc107;
+}

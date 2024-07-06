@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Birthdays</title>
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Birthdays</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Add a Birthday</h2>
+                <form method="post" action="/">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="number" class="form-control" name="month" placeholder="Month" min="1" max="12" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="number" class="form-control" name="day" placeholder="Day" min="1" max="31" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Birthday</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2>All Birthdays</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for birthday in birthdays %}
+                            <tr>
+                                <td>{{ birthday.name }}</td>
+                                <td>{{ birthday.month }}/{{ birthday.day }}</td>
+                                <td>
+                                    <a href="/edit?id={{ birthday.id }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <form method="post" action="/delete" style="display: inline;">
+                                        <input type="hidden" name="id" value="{{ birthday.id }}">
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
