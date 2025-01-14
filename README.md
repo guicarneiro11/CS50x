@@ -70,7 +70,7 @@ CS50x é o curso introdutório de Ciência da Computação de Harvard. O curso a
 
 ## 📝 Notas Importantes
 
-- Código desenvolvido seguindo a [Política Acadêmica de Honestidade](https://cs50.harvard.edu/x/2024/honesty/) do CS50
+- Código desenvolvido seguindo a [Política Acadêmica de Honestidade](https://cs50.harvard.edu/x/2024/honesty/) do CS50x
 - Soluções disponibilizadas para fins educacionais
 - Todos os exercícios foram testados e aprovados
 
